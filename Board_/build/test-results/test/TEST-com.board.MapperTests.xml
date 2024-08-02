@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.board.MapperTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-07-26T09:13:40" hostname="mingyeongmin-ui-MacBookAir.local" time="0.449">
+  <properties/>
+  <testcase name="testOfInsert()" classname="com.board.MapperTests" time="0.449">
+    <failure message="org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.board.mapper.BoardMapper.insertBoard" type="org.apache.ibatis.binding.BindingException">org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.board.mapper.BoardMapper.insertBoard
+	at app//org.apache.ibatis.binding.MapperMethod$SqlCommand.&lt;init&gt;(MapperMethod.java:229)
+	at app//org.apache.ibatis.binding.MapperMethod.&lt;init&gt;(MapperMethod.java:53)
+	at app//org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base@17.0.11/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at app//org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at app//org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at app//org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy109.insertBoard(Unknown Source)
+	at app//com.board.MapperTests.testOfInsert(MapperTests.java:23)
+	at java.base@17.0.11/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.11/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.11/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[18:13:39.177 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.board.MapperTests]: MapperTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:13:39.232 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.board.BoardApplication for test class com.board.MapperTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-07-26T18:13:39.418+09:00  INFO 31294 --- [    Test worker] com.board.MapperTests                    : Starting MapperTests using Java 17.0.11 with PID 31294 (started by mingyeongmin in /Users/mingyeongmin/Documents/workspace-spring-tool-suite-4-4.23.1.RELEASE/Board_)
+2024-07-26T18:13:39.419+09:00  INFO 31294 --- [    Test worker] com.board.MapperTests                    : No active profile set, falling back to 1 default profile: "default"
+2024-07-26T18:13:39.716+09:00  INFO 31294 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-26T18:13:39.723+09:00  INFO 31294 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-07-26T18:13:39.899+09:00  INFO 31294 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-26T18:13:40.000+09:00  INFO 31294 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d1bdd4a
+2024-07-26T18:13:40.001+09:00  INFO 31294 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-26T18:13:40.060+09:00  INFO 31294 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-26T18:13:40.093+09:00  INFO 31294 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-26T18:13:40.116+09:00  INFO 31294 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-26T18:13:40.264+09:00  INFO 31294 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-26T18:13:40.454+09:00  INFO 31294 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-26T18:13:40.456+09:00  INFO 31294 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-26T18:13:40.629+09:00  WARN 31294 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-26T18:13:40.873+09:00  INFO 31294 --- [    Test worker] com.board.MapperTests                    : Started MapperTests in 1.564 seconds (process running for 2.107)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
