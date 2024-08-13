@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 
 import com.board.domain.BoardDTO;
 import com.board.mapper.BoardMapper;
+//import com.board.paging.Criteria;
+import com.board.paging.PaginationInfo;
+///import com.board.mapper.Criteria;
 
 @Service
 public class BoardServiceImpl implements BoardService{ //implements -> boardService 인터페이스를 상속받아 메서드를 구현 
@@ -48,14 +51,20 @@ public class BoardServiceImpl implements BoardService{ //implements -> boardServ
 	}
 	
 	@Override
-	public List<BoardDTO> getBoardList(){
+	public List<BoardDTO> getBoardList(BoardDTO params) {
 		List<BoardDTO> boardList = Collections.emptyList();
 		
-		int boardTotalCount = boardMapper.selectBoardTotalCount();
+		int boardTotalCount = boardMapper.selectBoardTotalCount(params);
+		
+		PaginationInfo paginationInfo = new PaginationInfo(params);
+		paginationInfo.setTotalRecordCount(boardTotalCount);
+		
+		params.setPaginationInfo(paginationInfo);
 		
 		if(boardTotalCount > 0) {
-			boardList = boardMapper.selectBoardList();
+			boardList = boardMapper.selectBoardList(params);
 		}
+		
 		return boardList;
 	}
 }

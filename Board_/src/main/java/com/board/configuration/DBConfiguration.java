@@ -38,13 +38,18 @@ public class DBConfiguration {
 		SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
 		factoryBean.setDataSource(dataSource());
 		factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mappers/**/*Mapper.xml"));
-		factoryBean.setTypeAliasesPackage("com.board.domain");
+		factoryBean.setTypeAliasesPackage("com.board.*");
 		factoryBean.setConfiguration(mybatisConfg());
 		return factoryBean.getObject();
 	}
 	
 	@Bean 
 	public SqlSessionTemplate sqlSession() throws Exception{
+		SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+		factoryBean.setDataSource(dataSource());
+		factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mappers/**/*Mapper.xml"));
+		factoryBean.setTypeAliasesPackage("com.board.*");
+		factoryBean.setConfiguration(mybatisConfg());
 		return new SqlSessionTemplate(sqlSessionFactory());
 	}
 	

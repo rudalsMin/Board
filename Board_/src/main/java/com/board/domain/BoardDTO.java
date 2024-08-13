@@ -1,24 +1,62 @@
 package com.board.domain;
 
-import java.time.LocalDateTime;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class BoardDTO {
+public class BoardDTO extends CommonDTO {
 	
-	private Long idx; //글 번
-	private String title; //글 제목 
-	private String content; //내용 
-	private String writer; //작성자 
-	private int viewCnt; //조회수 
-	private String noticeYn; //공지여부 
-	private String secretYn; //비밀여부 
-	private String deleteYn; //삭제여부 
-	private LocalDateTime insertTime; //등록일 
-	private LocalDateTime updateTime; //수정일 
-	private LocalDateTime deleteTime; //삭제일 
-
+	private Long idx;
+	private String title;
+	private String content;
+	private String writer;
+	private int viewCnt;
+	private String noticeYn;
+	private String secretYn;
+	
+	@Override
+	public String toString() {
+		return "BoardDTO [idx=" + idx + ", title=" + title + ", content=" + content + ", writer=" + writer
+				+ ", viewCnt=" + viewCnt + ", noticeYn=" + noticeYn + ", secretYn=" + secretYn + "]";
+	}
+	
+	public Long getIdx() {
+		return idx;
+	}
+	public void setIdx(Long idx) {
+		this.idx = idx;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public int getViewCnt() {
+		return viewCnt;
+	}
+	public void setViewCnt(int viewCnt) {
+		this.viewCnt = viewCnt;
+	}
+	public String getNoticeYn() {
+		return noticeYn;
+	}
+	public void setNoticeYn(String noticeYn) {
+		this.noticeYn = noticeYn;
+	}
+	public String getSecretYn() {
+		return secretYn;
+	}
+	public void setSecretYn(String secretYn) {
+		this.secretYn = secretYn;
+	}
+	
 }
